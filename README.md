@@ -12,6 +12,14 @@ This project is a Face Recognition Attendance System that uses OpenCV and face_r
 - Logs attendance with timestamp in an Excel file
 - Easy to configure with known faces
 
+## Requirement.txt
+- opencv-python
+- face_recognition
+- xlsxwriter
+- cmake
+- dlib
+
+
 ## Dependencies
 - opencv-python
 - face_recognition
@@ -22,7 +30,7 @@ To run this project, you need to have Python installed on your system. Follow th
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/face-recognition-attendance-system.git
+    git clone https://github.com/Ramrkr/Scan_Sync_Attendance_System.git
     cd face-recognition-attendance-system
     ```
 
