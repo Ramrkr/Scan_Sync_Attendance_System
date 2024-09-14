@@ -1,0 +1,19 @@
+Project Title: Face Recognition Attendance System
+Overview
+The Face Recognition Attendance System is an innovative project designed to automate the process of attendance tracking using advanced face recognition technology. This system leverages the power of OpenCV and the face_recognition library to detect and recognize faces in real-time from a live video feed, logging attendance with precise timestamps into an Excel file.
+Key Features
+1. Real-Time Face Detection and Recognition: The system captures video from a webcam, detects faces in the video stream, and matches them against a database of known faces.
+2. Automated Attendance Logging: Upon recognizing a face, the system logs the person’s name, detection time, and status (“Present”) into an Excel file, ensuring accurate and tamper-proof attendance records.
+3. User-Friendly Configuration: The system is easy to set up and configure, allowing users to add new known faces by simply placing their images in designated folders.
+Technical Details
+* Libraries Used:
+o OpenCV: For capturing video from the webcam and drawing bounding boxes around detected faces.
+o face_recognition: For face detection and recognition, leveraging deep learning models to ensure high accuracy.
+o xlsxwriter: For creating and writing attendance logs into an Excel file.
+* Workflow:
+1. Initialization: The system initializes by loading known faces from specified folders. Each folder corresponds to a known person and contains multiple images of that person.
+2. Video Capture: The system starts capturing video from the webcam.
+3. Face Detection and Recognition: For each frame captured, the system detects faces and computes their encodings. It then compares these encodings with the known faces to find matches.
+4. Attendance Logging: When a match is found, the system logs the person’s name, detection time, and status into an Excel file.
+5. Real-Time Feedback: The system provides real-time feedback by displaying the video feed with bounding boxes around detected faces and labels indicating recognized individuals.
+

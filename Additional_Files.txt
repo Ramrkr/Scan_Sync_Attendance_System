@@ -1,0 +1,18 @@
+
+### 4. Additional Files
+- **LICENSE**: Choose a license for your project (e.g., MIT License).
+- **.gitignore**: Include common Python ignores like `__pycache__/`, `.vscode/`, `*.pyc`, etc.
+
+### 5. Setting Up the Repository
+1. **Create a new repository** on GitHub.
+2. **Add a README file** using the template above.
+3. **Push your code** to the repository:
+    ```bash
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git remote add origin https://github.com/your-username/face-recognition-attendance-system.git
+    git push -u origin master
+    ```
+
+Feel free to ask if you need any more help or have any questions!

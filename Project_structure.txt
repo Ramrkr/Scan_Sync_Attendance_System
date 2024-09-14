@@ -1,0 +1,13 @@
+face-recognition-attendance-system/
+│
+├── Person1_folder_name/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+├── Person2_folder_name/
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
+├── main.py
+├── requirements.txt
+└── output.xlsx

@@ -1,0 +1,36 @@
+Implementation
+1. Loading Known Faces:
+Python
+known_persons = {}
+for person, folder_path in known_persons_folder.items():
+    image_paths = [os.path.join(folder_path, file) for file in os.listdir(folder_path) if file.lower().endswith(".jpg")]
+    known_persons[person] = [face_recognition.face_encodings(face_recognition.load_image_file(image_path))[0] for image_path in image_paths]
+2. Video Capture and Face Recognition:
+Python
+video_capture = cv2.VideoCapture(0)
+while True:
+    ret, frame = video_capture.read()
+    face_locations = face_recognition.face_locations(frame)
+    face_encodings = face_recognition.face_encodings(frame, face_locations)
+    for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+        for name, known_encodings in known_persons.items():
+            match = face_recognition.compare_faces(known_encodings, face_encoding)
+            if True in match:
+                detection_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                hist.append([name, detection_time, "Present"])
+                break
+3. Logging Attendance:
+Python
+workbook = xlsxwriter.Workbook("output.xlsx")
+worksheet = workbook.add_worksheet()
+for row, (name, time, status) in enumerate(hist, start=1):
+    worksheet.write(row, 0, name)
+    worksheet.write(row, 1, time)
+    worksheet.write(row, 2, status)
+workbook.close()
+Impact and Future Enhancements
+This project demonstrates practical applications of machine learning and computer vision in automating routine tasks. It can be extended to include features like:
+* Multi-Camera Support: Integrating multiple cameras for larger coverage areas.
+* Cloud Integration: Storing attendance logs in the cloud for remote access and analysis.
+* Enhanced Security: Adding features like liveness detection to prevent spoofing attacks.
+
