@@ -1,17 +1,12 @@
-1. Project Description
+ Project Description
 Your project is a Face Recognition Attendance System that uses OpenCV and face_recognition libraries to detect and recognize faces from a live video feed and logs the attendance in an Excel file.
 
-2. Dependencies
-List all the dependencies required for your project:
+ Dependencies
 
 opencv-python
 face_recognition
 xlsxwriter
-You can create a requirements.txt file to list these dependencies:
 
-opencv-python
-face_recognition
-xlsxwriter
 
 3. README File
 Here’s a detailed README file template for your project:
